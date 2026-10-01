@@ -21,7 +21,7 @@ Implementación de un script asociado a un objeto en escena que controla y modif
 * **Modificación Parcial Aleatoria:** Cada ciclo de frames completado, se selecciona un único índice aleatorio ($0$, $1$ o $2$) para modificar únicamente esa componente dentro del vector.
 * **Aplicación al Material:** Se convierte la estructura `Vector3` en un objeto de tipo `Color` y se asigna al material mediante la referencia de su `Renderer`.
 
-![Demostración Ejercicio 1](media/ejercicio1.gif)
+![Demostración Ejercicio 1](media/Ejercicio1.gif)
 
 ---
 
@@ -39,7 +39,7 @@ Script asociado a un GameObject tipo Esfera para realizar cálculos algebraicos 
 * **Comparación Espacial:** Comparación del eje $Y$ para determinar cuál de los dos vectores se encuentra a una cota de altura superior.
 * **Detección de Cambios en Tiempo Real:** Evaluación continua en `Update()` que únicamente ejecuta el re-cálculo e imprime en consola cuando se detecta una variación respecto al frame anterior.
 
-![Demostración Ejercicio 2](media/ejercicio2.gif)
+![Demostración Ejercicio 2](media/Ejercicio2.gif)
 
 ---
 
@@ -53,7 +53,7 @@ Obtención de las coordenadas del objeto en el mundo 3D y su representación vis
 * **Integración con UI / TextMeshPro:** Uso de referencias a componentes `TMP_Text` serializadas (`[SerializeField]`) para desacoplar el script de la interfaz.
 * **Formateo de Cadenas:** Interpolación de texto para formatear las coordenadas flotantes a dos decimales (`F2`), actualizando el bocadillo de texto dinámicamente cuando el objeto se desplaza.
 
-![Demostración Ejercicio 3](media/ejercicio3.gif)
+![Demostración Ejercicio 3](media/Ejercicio3.gif)
 
 ---
 
@@ -67,7 +67,7 @@ Script de supervisión espacial que localiza otros GameObjects en la escena medi
 * **Cálculo de Distancia Multiobjeto:** Medición continua de distancias entre el punto de origen (Esfera) y las posiciones de los objetos encontrados.
 * **Optimización de Mensajes en Consola:** Control de estado que compara la posición actual de los tres objetos involucrados respecto al frame anterior, imprimiendo el reporte en la consola exclusivamente cuando alguno de ellos cambia de posición.
 
-![Demostración Ejercicio 4](media/ejercicio4.gif)
+![Demostración Ejercicio 4](media/Ejercicio4.gif)
 
 ---
 
@@ -75,11 +75,12 @@ Script de supervisión espacial que localiza otros GameObjects en la escena medi
 
 ```text
 /
-├── Scripts/
-│   ├── ScriptEjercicio1.cs
-│   ├── ScriptEjercicio2.cs
-│   ├── ScriptEjercicio3.cs
-│   └── ScriptEjercicio4.cs
+├── Assets/
+│   ├──Scripts/
+|      ├── Ejercicio1/
+│      ├── Ejercicio2/
+│      ├── Ejercicio3/
+│      └── Ejercicio4/
 ├── media/
 │   ├── ejercicio1.gif
 │   ├── ejercicio2.gif
