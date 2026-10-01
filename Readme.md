@@ -31,7 +31,7 @@ Implementación de un script asociado a un objeto en escena que controla y modif
 Script asociado a un GameObject tipo Esfera para realizar cálculos algebraicos en espacio tridimensional basados en entradas configurables desde el Inspector.
 
 **Hitos y Lógica Implementada:**
-* **Entradas Paramétricas:** Definición de dos variables públicas de tipo `Vector3` (`vectorA` y `vectorB`) editables en tiempo real.
+* **Entradas Paramétricas:** Definición de dos variables públicas de tipo `Vector3` (`vector1` y `vector2`) editables en tiempo real.
 * **Cálculos Vectores:** 
   * Cálculo de magnitudes mediante `.magnitude`.
   * Cálculo del ángulo entre ambos vectores en grados con `Vector3.Angle()`.
@@ -50,7 +50,7 @@ Obtención de las coordenadas del objeto en el mundo 3D y su representación vis
 
 **Hitos y Lógica Implementada:**
 * **Acceso a Componentes:** Recuperación directa de la propiedad `transform.position` del GameObject al que va asociado el script.
-* **Integración con UI / TextMeshPro:** Uso de referencias a componentes `TMP_Text` serializadas (`[SerializeField]`) para desacoplar el script de la interfaz.
+* **Integración con UI / TextMeshPro:** Uso de referencias a componentes `TMP_Text` para mostrar texto en pantalla.
 * **Formateo de Cadenas:** Interpolación de texto para formatear las coordenadas flotantes a dos decimales (`F2`), actualizando el bocadillo de texto dinámicamente cuando el objeto se desplaza.
 
 ![Demostración Ejercicio 3](media/Ejercicio3.gif)
@@ -63,7 +63,7 @@ Obtención de las coordenadas del objeto en el mundo 3D y su representación vis
 Script de supervisión espacial que localiza otros GameObjects en la escena mediante etiquetas (*Tags*) para medir la distancia relativa entre ellos.
 
 **Hitos y Lógica Implementada:**
-* **Búsqueda Dinámica por Tag:** Uso de `GameObject.FindWithTag()` durante el `Start()` para localizar las referencias del Cubo y el Cilindro en la jerarquía sin necesidad de enlazarlas manualmente en el editor.
+* **Búsqueda Dinámica por Tag:** Uso de `GameObject.FindGameObjectWithTag()` durante el `Start()` para localizar las referencias del Cubo y el Cilindro en la jerarquía sin necesidad de enlazarlas manualmente en el editor.
 * **Cálculo de Distancia Multiobjeto:** Medición continua de distancias entre el punto de origen (Esfera) y las posiciones de los objetos encontrados.
 * **Optimización de Mensajes en Consola:** Control de estado que compara la posición actual de los tres objetos involucrados respecto al frame anterior, imprimiendo el reporte en la consola exclusivamente cuando alguno de ellos cambia de posición.
 
